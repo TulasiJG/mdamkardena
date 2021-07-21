@@ -54,12 +54,10 @@ function draw() {
 
 
   start.visible=true;
-  if(mousePressedOver(start)){
-    startGame();
-  }
 if(gameState==="PLAY"){
- 
-  bg.velocityY = 4;
+   if(mousePressedOver(start)){
+    startGame();
+      bg.velocityY = 4;
   if(bg.y > 600){
     bg.y = 300;
   } 
@@ -135,6 +133,7 @@ generateCoins();
       if(coinScore<=-10 || iron.y>610){
         gameState ="END";
        }
+  }
  }
       else if (gameState === "END") { 
         bg.velocityY = 0;
